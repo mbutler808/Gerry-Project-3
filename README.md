@@ -3,6 +3,7 @@
 I work on Maize Genetics so for this project I used Maize Flowering data from our Waimanalo Summer 2024 field tests.
 
 The things you'll need to run the code and look at like the script and QMD are right here on the front page.
+It would be best to read the qmd and script side by side becasue the qmd has all the explanation.
 
 If you wanna see all that I did with good explantion and ina  clean format...chekc out my website! https://jrrygnzlz.github.io/Project-3/ 
 
