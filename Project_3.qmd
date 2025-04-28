@@ -1,0 +1,249 @@
+---
+Title: "Project 3: Maize Flowering Data Exploration"
+Author: "Gerardo Gonzalez"
+Date: "March 22, 2025"
+Format: html
+output-dir: docs
+---
+
+# Setup
+
+This needs to run to load the R script so we can include the code chunks below.
+Note that you can pull in more than one R script if you want.
+
+```{r, include=FALSE, cache=FALSE}
+knitr::read_chunk("Project_3_cleaned_script.R")
+```
+
+# Welcome to Project 3 for Dr. Marguerite Butler's ZOOL710 Class at UH Manoa.
+
+My name is Jerry and I work on Maize Genetics.
+
+In our lab the project we are working on focuses on trying to make temperate corn insensitive todaylength so that it can flower under the longer days in temperate lattitudes and breeders can access and incroporate desireble traits from the the highlydiverse tropical maize genome into temperate maize through cross pollination. 
+
+Here in this project we'll explore the shedding and silking days of different maize lines grown in the Waimanalo research station. 
+
+#### TALK ABOUT THE VARIETES AND WHATS UNIQUE ABOUT EACH #####
+
+First you're going to want to download the file to your correct folder, then navigate to the correct location where the file is. 
+
+# Lets load the data first
+
+Lets set up the data location, then read and save the data under a preferred name
+
+```{r, Loaddata}
+```
+
+# Now lets explore the data a little bit
+
+Load dplyr and skmir first
+
+```{r, Exploredata}
+```
+
+# What we have:
+
+Pedigree: Genotype / variety
+SHD: Shedding date (Pollen starts)
+SK: Silking Date (Female flowers have silks and are ready for reproduction)
+Days_SHD: Days after planting to shedding
+Days_SK: Dats after planting to silking
+GDD_SHD: Growing degree days to shedding
+GDD_SK: Growing degree days to silking
+
+Okay, we have some good information, but we should add two columns that calculate 
+1. the difference in Days after planting (DAP) between silking and shedding (DAP_SK - DAP_SHD)
+2. the difference in Growing degree days (GDD) between silking and shedding (GDD_SK - GDD_SHD)
+
+This will be good to add because the time between shedding and silking (especially thermal time) is extremely important in corn development and flowering time. 
+
+# Now lets add the columns
+
+```{r, Addcolumns}
+```
+
+# Nice! Now we have our new columns added!
+
+
+# Now lets do some Summary Statistics to see what's going on with each variety.
+
+We'll look at how early or late each pedigree is and how synchronized shedding and silking are on average.
+
+```{r, Summarystats}
+```
+
+Oops, two CML277 rows showed up, but we just want one.
+lets remove that extra space then look at the summary table again.
+
+```{r, Fixrows}
+```
+
+Lets fix the titles so its really clear what we are looking at, then analyze the data and make some graphs.
+
+```{r, Fixtitles}
+```
+
+Now these data tables look much nicer.
+
+Lets add some code to make the tables look really nice when we view it in the website html.
+
+```{r, Looknice}
+```
+
+Okay so what are we looking at here? We basically have averages of the values for each pedigree from the original data. We want to look at how early they are flowering, but also synchronization between shedding and silking because if they are not synchronized, thus can create problems in the field. 
+
+We can see that Mo17 has the earliest shed and silk date, while CML258 has the latest shed and silk date. It's important to note that B73 is a positive control and has perfectly synchronized flowering time. Some varietes have negative values for Avg days between shedding and silking meaning that the silks were ready before the pollen was shedding. This is bad because ideally the pollen shedding and silk emergence should overlap, with pollen emergence slightly before or at the same time as the silks. If the silks come out too early, they are more sensitive and could get old and dry out quickly before pollen is available meaning bad fertilization and kernel set. 
+
+Now that we have some idea of what we are looking at and it cleaner, lets make some graphs
+
+Now time to make some graphs and do some statistical analysis!
+
+# Lets make some graphs for the Original Data
+
+## now lets make some graphs based on the original data to look at some relationships
+
+
+# Graph time!
+
+Original Data 
+
+# Boxplot 1 - Days to Shedding by Variety
+
+This boxplot will plot Days to shedding by variety.
+It will show which varieites shed pollen earlier or later and variation within each.
+
+```{r, Boxplot1}
+```
+
+We can see that CML277, CML 258, and Tzi9 shed pretty late
+while B104, B73, and Mo17 shed pretty early.
+
+
+# Boxplot 2 - Days between shedding and silking
+
+This boxplot will plot Days between shedding and silking.
+It will show how synchornized flowering is within varieties.
+
+```{r, Boxplot2}
+```
+
+We can see that the most synchronized (besides the B73 control) are CML10, CML258, and Mo17.
+
+
+# Scatterplot 1 - Shed GDD vs Silk GDD
+
+This scatterplot will plot Shed GDD vs Silk GDD
+
+Plants on the 1:1 line are perfectly synchronized; points below = silking earlier and points above = silking later
+
+```{r, Scatterplot1}
+```
+
+
+# Barplot 1 - Days between shedding and silking
+
+This barplot will plot days between shedding and silking.
+It will show overall how much delay or mismatch exsts across all plants.
+
+```{r, Barplot1}
+```
+
+We can see that Tzi9 did pretyy bad and the silks came out way before (4-5 days) before the pollen shed. This is bad for successfull ferlitization
+We can also see that B104 had a pretty large difference between shed and silk date being 3 days apart
+
+
+# Anova 1 - Shedding and Silking days between varieties
+
+Now lets do an ANOVA for Days between shedding and silking between varieties to confirm any correlation or between varieties
+
+```{r, Anova1}
+```
+
+We can see the P value is 0.00000000112 meaning that there is a highly significant difference among varieties (Pedigree)
+in their days between shedding and silking. 
+
+Some varieties are much more synchronized than others and it's a real biological difference. 
+
+
+
+
+# Summarized Data
+
+# Now lets do some graphs for the Summarized Data
+
+# Barplot 2 - Average days to shedding by variety
+
+This barplot will plot the average days to shedding by variety
+
+```{r, Barplot2}
+```
+We can see that Tzi9 and CML258 had the latest shedding, while Mo17 had the earliest shedding
+
+
+# Barplot 3 - Average days between shedding and silking
+
+This barplot will plot the average days between shedding and silking
+We'll be able to easily spot which varieties have better synchrony (closer to 0)
+
+```{r, Barplot3}
+```
+
+We can see that CML10 and CML258 have really good synchrony, while TZi9 and B104 have really bad synchrony
+
+
+# Correlation 1 - Avg days to shedding and silking
+
+This will show the average days ti shedding vs the average days to silking
+This tests of varities that shed earlier also silk earlier - correlation acorss averages.
+
+If the point is right on the line then shedding and silking happens at the same time
+Points above the line mean silking happens after shedding.
+Points below the line mean that silking happens earlier then shedding.
+
+```{r, Correlation1}
+```
+
+We can see that Mo17 is the most synchornized, while CML258 is the least synchronized.
+
+
+# Correlation 2 - Avg days ti shedding and avg days to silking
+
+This is a correlation between Avg Days to Shedding and Avg Days to Silking
+
+```{r, Correlation2}
+```
+
+
+We can see the correlation value was r = 0.898
+This means that when the average days to shedding increases, the average days to silking also increases.
+This shows there is a strong posisitve correlation between shedding and silk and varieties that shed later also tend to silk later. 
+
+
+
+#### CONCLUSION #######
+
+# Thanks for listening!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
