@@ -215,7 +215,7 @@ Points below the line mean that silking happens earlier then shedding.
 We can see that Mo17 is the most synchornized, while CML258 is the least synchronized.
 
 
-# Correlation 2 - Avg days ti shedding and avg days to silking
+# Correlation 2 - Avg days to shedding and avg days to silking
 
 This is a correlation between Avg Days to Shedding and Avg Days to Silking
 

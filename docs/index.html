@@ -91,10 +91,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>My name is Jerry and I work on Maize Genetics.</p>
 <p>In our lab the project we are working on focuses on trying to make temperate corn insensitive todaylength so that it can flower under the longer days in temperate lattitudes and breeders can access and incroporate desireble traits from the the highlydiverse tropical maize genome into temperate maize through cross pollination.</p>
 <p>Here in this project we’ll explore the shedding and silking days of different maize lines grown in the Waimanalo research station.</p>
-<section id="talk-about-the-varietes-and-whats-unique-about-each" class="level4">
-<h4 class="anchored" data-anchor-id="talk-about-the-varietes-and-whats-unique-about-each">TALK ABOUT THE VARIETES AND WHATS UNIQUE ABOUT EACH</h4>
-<p>First you’re going to want to download the file to your correct folder, then navigate to the correct location where the file is.</p>
 </section>
+<section id="the-maize-we-will-explore" class="level1">
+<h1>The Maize we will explore</h1>
+<p>This project examines flowering time traits in eight maize inbred lines grown during the Summer 2024 planting in Hawaiʻi. The goal is to compare temperate and tropical varieties based on their days to shedding and the interval between shedding and silking. The temperate lines—B73, B104, and Mo17—are widely used in breeding and research for their early flowering and adaptation to cooler climates. In contrast, the tropical lines—Tzi8, Tzi9, CML10, CML277, and CML258—originate from warmer regions and typically flower later. By evaluating thermal time (GDD) and developmental timing across these lines, we aim to highlight physiological differences and identify patterns relevant for hybrid development and climate adaptation.</p>
+<p>First you’re going to want to download the file to your correct folder, then navigate to the correct location where the file is.</p>
 </section>
 <section id="lets-load-the-data-first" class="level1">
 <h1>Lets load the data first</h1>
@@ -102,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>here() starts at C:/Users/jerry/Documents/Git/Project-1-2-3</code></pre>
+<pre><code>here() starts at C:/Users/jerry/Documents/Git/Project-3</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -589,23 +590,23 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>HI_Data <span class="sc">%&gt;%</span></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="iqyrvuzwez" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#iqyrvuzwez table {
+<div id="celztqvapm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#celztqvapm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#iqyrvuzwez thead, #iqyrvuzwez tbody, #iqyrvuzwez tfoot, #iqyrvuzwez tr, #iqyrvuzwez td, #iqyrvuzwez th {
+#celztqvapm thead, #celztqvapm tbody, #celztqvapm tfoot, #celztqvapm tr, #celztqvapm td, #celztqvapm th {
   border-style: none;
 }
 
-#iqyrvuzwez p {
+#celztqvapm p {
   margin: 0;
   padding: 0;
 }
 
-#iqyrvuzwez .gt_table {
+#celztqvapm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -631,12 +632,12 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-left-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_caption {
+#celztqvapm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#iqyrvuzwez .gt_title {
+#celztqvapm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -648,7 +649,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-width: 0;
 }
 
-#iqyrvuzwez .gt_subtitle {
+#celztqvapm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -660,7 +661,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-top-width: 0;
 }
 
-#iqyrvuzwez .gt_heading {
+#celztqvapm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -672,13 +673,13 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_bottom_border {
+#celztqvapm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_col_headings {
+#celztqvapm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -693,7 +694,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_col_heading {
+#celztqvapm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -713,7 +714,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   overflow-x: hidden;
 }
 
-#iqyrvuzwez .gt_column_spanner_outer {
+#celztqvapm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -725,15 +726,15 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 4px;
 }
 
-#iqyrvuzwez .gt_column_spanner_outer:first-child {
+#celztqvapm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iqyrvuzwez .gt_column_spanner_outer:last-child {
+#celztqvapm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iqyrvuzwez .gt_column_spanner {
+#celztqvapm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -745,11 +746,11 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   width: 100%;
 }
 
-#iqyrvuzwez .gt_spanner_row {
+#celztqvapm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#iqyrvuzwez .gt_group_heading {
+#celztqvapm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -775,7 +776,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   text-align: left;
 }
 
-#iqyrvuzwez .gt_empty_group_heading {
+#celztqvapm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -790,15 +791,15 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   vertical-align: middle;
 }
 
-#iqyrvuzwez .gt_from_md > :first-child {
+#celztqvapm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#iqyrvuzwez .gt_from_md > :last-child {
+#celztqvapm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#iqyrvuzwez .gt_row {
+#celztqvapm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -817,7 +818,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   overflow-x: hidden;
 }
 
-#iqyrvuzwez .gt_stub {
+#celztqvapm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -830,7 +831,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#iqyrvuzwez .gt_stub_row_group {
+#celztqvapm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -844,15 +845,15 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   vertical-align: top;
 }
 
-#iqyrvuzwez .gt_row_group_first td {
+#celztqvapm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#iqyrvuzwez .gt_row_group_first th {
+#celztqvapm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#iqyrvuzwez .gt_summary_row {
+#celztqvapm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -862,16 +863,16 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#iqyrvuzwez .gt_first_summary_row {
+#celztqvapm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_first_summary_row.thick {
+#celztqvapm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#iqyrvuzwez .gt_last_summary_row {
+#celztqvapm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -881,7 +882,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_grand_summary_row {
+#celztqvapm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -891,7 +892,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#iqyrvuzwez .gt_first_grand_summary_row {
+#celztqvapm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -901,7 +902,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-top-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_last_grand_summary_row_top {
+#celztqvapm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -911,11 +912,11 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_striped {
+#celztqvapm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iqyrvuzwez .gt_table_body {
+#celztqvapm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -924,7 +925,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_footnotes {
+#celztqvapm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -938,7 +939,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_footnote {
+#celztqvapm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -947,7 +948,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#iqyrvuzwez .gt_sourcenotes {
+#celztqvapm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -961,7 +962,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#iqyrvuzwez .gt_sourcenote {
+#celztqvapm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -969,72 +970,72 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#iqyrvuzwez .gt_left {
+#celztqvapm .gt_left {
   text-align: left;
 }
 
-#iqyrvuzwez .gt_center {
+#celztqvapm .gt_center {
   text-align: center;
 }
 
-#iqyrvuzwez .gt_right {
+#celztqvapm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iqyrvuzwez .gt_font_normal {
+#celztqvapm .gt_font_normal {
   font-weight: normal;
 }
 
-#iqyrvuzwez .gt_font_bold {
+#celztqvapm .gt_font_bold {
   font-weight: bold;
 }
 
-#iqyrvuzwez .gt_font_italic {
+#celztqvapm .gt_font_italic {
   font-style: italic;
 }
 
-#iqyrvuzwez .gt_super {
+#celztqvapm .gt_super {
   font-size: 65%;
 }
 
-#iqyrvuzwez .gt_footnote_marks {
+#celztqvapm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#iqyrvuzwez .gt_asterisk {
+#celztqvapm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#iqyrvuzwez .gt_indent_1 {
+#celztqvapm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#iqyrvuzwez .gt_indent_2 {
+#celztqvapm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#iqyrvuzwez .gt_indent_3 {
+#celztqvapm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#iqyrvuzwez .gt_indent_4 {
+#celztqvapm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#iqyrvuzwez .gt_indent_5 {
+#celztqvapm .gt_indent_5 {
   text-indent: 25px;
 }
 
-#iqyrvuzwez .katex-display {
+#celztqvapm .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#iqyrvuzwez div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#celztqvapm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1326,23 +1327,23 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>HI_Summary <span class="sc">%&gt;%</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="bqoxymuygn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bqoxymuygn table {
+<div id="jpjcipnsst" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jpjcipnsst table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bqoxymuygn thead, #bqoxymuygn tbody, #bqoxymuygn tfoot, #bqoxymuygn tr, #bqoxymuygn td, #bqoxymuygn th {
+#jpjcipnsst thead, #jpjcipnsst tbody, #jpjcipnsst tfoot, #jpjcipnsst tr, #jpjcipnsst td, #jpjcipnsst th {
   border-style: none;
 }
 
-#bqoxymuygn p {
+#jpjcipnsst p {
   margin: 0;
   padding: 0;
 }
 
-#bqoxymuygn .gt_table {
+#jpjcipnsst .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1368,12 +1369,12 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-left-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_caption {
+#jpjcipnsst .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bqoxymuygn .gt_title {
+#jpjcipnsst .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1385,7 +1386,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-width: 0;
 }
 
-#bqoxymuygn .gt_subtitle {
+#jpjcipnsst .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1397,7 +1398,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-top-width: 0;
 }
 
-#bqoxymuygn .gt_heading {
+#jpjcipnsst .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1409,13 +1410,13 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_bottom_border {
+#jpjcipnsst .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_col_headings {
+#jpjcipnsst .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1430,7 +1431,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_col_heading {
+#jpjcipnsst .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1450,7 +1451,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   overflow-x: hidden;
 }
 
-#bqoxymuygn .gt_column_spanner_outer {
+#jpjcipnsst .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1462,15 +1463,15 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 4px;
 }
 
-#bqoxymuygn .gt_column_spanner_outer:first-child {
+#jpjcipnsst .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bqoxymuygn .gt_column_spanner_outer:last-child {
+#jpjcipnsst .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bqoxymuygn .gt_column_spanner {
+#jpjcipnsst .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1482,11 +1483,11 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   width: 100%;
 }
 
-#bqoxymuygn .gt_spanner_row {
+#jpjcipnsst .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bqoxymuygn .gt_group_heading {
+#jpjcipnsst .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1512,7 +1513,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   text-align: left;
 }
 
-#bqoxymuygn .gt_empty_group_heading {
+#jpjcipnsst .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1527,15 +1528,15 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   vertical-align: middle;
 }
 
-#bqoxymuygn .gt_from_md > :first-child {
+#jpjcipnsst .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bqoxymuygn .gt_from_md > :last-child {
+#jpjcipnsst .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bqoxymuygn .gt_row {
+#jpjcipnsst .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1554,7 +1555,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   overflow-x: hidden;
 }
 
-#bqoxymuygn .gt_stub {
+#jpjcipnsst .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1567,7 +1568,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#bqoxymuygn .gt_stub_row_group {
+#jpjcipnsst .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1581,15 +1582,15 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   vertical-align: top;
 }
 
-#bqoxymuygn .gt_row_group_first td {
+#jpjcipnsst .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bqoxymuygn .gt_row_group_first th {
+#jpjcipnsst .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bqoxymuygn .gt_summary_row {
+#jpjcipnsst .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1599,16 +1600,16 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#bqoxymuygn .gt_first_summary_row {
+#jpjcipnsst .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_first_summary_row.thick {
+#jpjcipnsst .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bqoxymuygn .gt_last_summary_row {
+#jpjcipnsst .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1618,7 +1619,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_grand_summary_row {
+#jpjcipnsst .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1628,7 +1629,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#bqoxymuygn .gt_first_grand_summary_row {
+#jpjcipnsst .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1638,7 +1639,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-top-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_last_grand_summary_row_top {
+#jpjcipnsst .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1648,11 +1649,11 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_striped {
+#jpjcipnsst .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bqoxymuygn .gt_table_body {
+#jpjcipnsst .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1661,7 +1662,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-bottom-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_footnotes {
+#jpjcipnsst .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1675,7 +1676,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_footnote {
+#jpjcipnsst .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1684,7 +1685,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#bqoxymuygn .gt_sourcenotes {
+#jpjcipnsst .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1698,7 +1699,7 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   border-right-color: #D3D3D3;
 }
 
-#bqoxymuygn .gt_sourcenote {
+#jpjcipnsst .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1706,72 +1707,72 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
   padding-right: 5px;
 }
 
-#bqoxymuygn .gt_left {
+#jpjcipnsst .gt_left {
   text-align: left;
 }
 
-#bqoxymuygn .gt_center {
+#jpjcipnsst .gt_center {
   text-align: center;
 }
 
-#bqoxymuygn .gt_right {
+#jpjcipnsst .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bqoxymuygn .gt_font_normal {
+#jpjcipnsst .gt_font_normal {
   font-weight: normal;
 }
 
-#bqoxymuygn .gt_font_bold {
+#jpjcipnsst .gt_font_bold {
   font-weight: bold;
 }
 
-#bqoxymuygn .gt_font_italic {
+#jpjcipnsst .gt_font_italic {
   font-style: italic;
 }
 
-#bqoxymuygn .gt_super {
+#jpjcipnsst .gt_super {
   font-size: 65%;
 }
 
-#bqoxymuygn .gt_footnote_marks {
+#jpjcipnsst .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bqoxymuygn .gt_asterisk {
+#jpjcipnsst .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bqoxymuygn .gt_indent_1 {
+#jpjcipnsst .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bqoxymuygn .gt_indent_2 {
+#jpjcipnsst .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bqoxymuygn .gt_indent_3 {
+#jpjcipnsst .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bqoxymuygn .gt_indent_4 {
+#jpjcipnsst .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bqoxymuygn .gt_indent_5 {
+#jpjcipnsst .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bqoxymuygn .katex-display {
+#jpjcipnsst .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bqoxymuygn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jpjcipnsst div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1862,18 +1863,27 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 </section>
 <section id="graph-time" class="level1">
 <h1>Graph time!</h1>
+<p>Before we make the graphs, lets group together the temperate and tropical lines so it’s easier to visually compare them.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reorder PEDIGREE factor</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>HI_Data<span class="sc">$</span>PEDIGREE <span class="ot">&lt;-</span> <span class="fu">factor</span>(HI_Data<span class="sc">$</span>PEDIGREE, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"B73"</span>, <span class="st">"B104"</span>, <span class="st">"Mo17"</span>, <span class="st">"Tzi8"</span>, <span class="st">"Tzi9"</span>, <span class="st">"CML10"</span>, <span class="st">"CML277"</span>, <span class="st">"CML258"</span>))</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Also reorder HI_Summary if you're using it</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>HI_Summary<span class="sc">$</span>PEDIGREE <span class="ot">&lt;-</span> <span class="fu">factor</span>(HI_Summary<span class="sc">$</span>PEDIGREE, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"B73"</span>, <span class="st">"B104"</span>, <span class="st">"Mo17"</span>, <span class="st">"Tzi8"</span>, <span class="st">"Tzi9"</span>, <span class="st">"CML10"</span>, <span class="st">"CML277"</span>, <span class="st">"CML258"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Much better.</p>
 <p>Original Data</p>
 </section>
 <section id="boxplot-1---days-to-shedding-by-variety" class="level1">
 <h1>Boxplot 1 - Days to Shedding by Variety</h1>
 <p>This boxplot will plot Days to shedding by variety. It will show which varieites shed pollen earlier or later and variation within each.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Days to Shedding</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days to Shedding by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Days After Planting"</span>) <span class="sc">+</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Days to Shedding</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days to Shedding by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Days After Planting"</span>) <span class="sc">+</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1888,10 +1898,10 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 <h1>Boxplot 2 - Days between shedding and silking</h1>
 <p>This boxplot will plot Days between shedding and silking. It will show how synchornized flowering is within varieties.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days Between Shedding and Silking by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Days Difference"</span>) <span class="sc">+</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days Between Shedding and Silking by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Days Difference"</span>) <span class="sc">+</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1907,14 +1917,14 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 <p>This scatterplot will plot Shed GDD vs Silk GDD</p>
 <p>Plants on the 1:1 line are perfectly synchronized; points below = silking earlier and points above = silking later</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Shed GDD</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Silk GDD</span><span class="st">`</span>, <span class="at">color =</span> PEDIGREE)) <span class="sc">+</span></span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Relationship between Shed GDD and Silk GDD"</span>, <span class="at">x =</span> <span class="st">"Shed GDD"</span>, <span class="at">y =</span> <span class="st">"Silk GDD"</span>) <span class="sc">+</span></span>
-<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Dark2"</span>) <span class="sc">+</span>  </span>
-<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Shed GDD</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Silk GDD</span><span class="st">`</span>, <span class="at">color =</span> PEDIGREE)) <span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Relationship between Shed GDD and Silk GDD"</span>, <span class="at">x =</span> <span class="st">"Shed GDD"</span>, <span class="at">y =</span> <span class="st">"Silk GDD"</span>) <span class="sc">+</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_brewer</span>(<span class="at">palette =</span> <span class="st">"Dark2"</span>) <span class="sc">+</span>  </span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1928,28 +1938,28 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 <h1>Barplot 1 - Days between shedding and silking</h1>
 <p>This barplot will plot days between shedding and silking. It will show overall how much delay or mismatch exsts across all plants.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>count_data <span class="ot">&lt;-</span> HI_Data <span class="sc">%&gt;%</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(PEDIGREE, <span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(count_data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>, <span class="at">y =</span> count, <span class="at">fill =</span> PEDIGREE, <span class="at">label =</span> PEDIGREE)) <span class="sc">+</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> PEDIGREE), </span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.9</span>), </span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle =</span> <span class="dv">90</span>,        <span class="co"># &lt;-- rotate vertical</span></span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="fl">0.5</span>, </span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, </span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days between Shedding and Silking (by Variety)"</span>, </span>
-<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Days Difference"</span>, </span>
-<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>) <span class="sc">+</span></span>
-<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Dark2"</span>) <span class="sc">+</span></span>
-<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fu">min</span>(count_data<span class="sc">$</span><span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>),</span>
-<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">to =</span> <span class="fu">max</span>(count_data<span class="sc">$</span><span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>),</span>
-<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>count_data <span class="ot">&lt;-</span> HI_Data <span class="sc">%&gt;%</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(PEDIGREE, <span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count =</span> <span class="fu">n</span>(), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(count_data, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>, <span class="at">y =</span> count, <span class="at">fill =</span> PEDIGREE, <span class="at">label =</span> PEDIGREE)) <span class="sc">+</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> PEDIGREE), </span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.9</span>), </span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>            <span class="at">angle =</span> <span class="dv">90</span>,        <span class="co"># &lt;-- rotate vertical</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="fl">0.5</span>, </span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, </span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days between Shedding and Silking (by Variety)"</span>, </span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Days Difference"</span>, </span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>) <span class="sc">+</span></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Dark2"</span>) <span class="sc">+</span></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="fu">min</span>(count_data<span class="sc">$</span><span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>),</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">to =</span> <span class="fu">max</span>(count_data<span class="sc">$</span><span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>),</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">by =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1964,8 +1974,8 @@ $ GDD_diff  &lt;dbl&gt; 95.0, 93.0, 63.5, 0.0, 0.0, 0.0, 63.5, 29.5, 29.5, -62.0
 <h1>Anova 1 - Shedding and Silking days between varieties</h1>
 <p>Now lets do an ANOVA for Days between shedding and silking between varieties to confirm any correlation or between varieties</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>anova_days_diff <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span> <span class="sc">~</span> PEDIGREE, <span class="at">data =</span> HI_Data)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_days_diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>anova_days_diff <span class="ot">&lt;-</span> <span class="fu">aov</span>(<span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span> <span class="sc">~</span> PEDIGREE, <span class="at">data =</span> HI_Data)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(anova_days_diff)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 PEDIGREE     7  95.96  13.708   36.56 1.12e-08 ***
@@ -1987,10 +1997,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h1>Barplot 2 - Average days to shedding by variety</h1>
 <p>This barplot will plot the average days to shedding by variety</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Summary, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Avg days to shedding</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"lightgreen"</span>) <span class="sc">+</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Average Days to Shedding by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Avg Days"</span>) <span class="sc">+</span></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Summary, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Avg days to shedding</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"lightgreen"</span>) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Average Days to Shedding by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Avg Days"</span>) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2005,10 +2015,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <h1>Barplot 3 - Average days between shedding and silking</h1>
 <p>This barplot will plot the average days between shedding and silking We’ll be able to easily spot which varieties have better synchrony (closer to 0)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Summary, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Avg days between shedding and silking</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"coral"</span>) <span class="sc">+</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Average Days between Shedding and Silking by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Avg Days Difference"</span>) <span class="sc">+</span></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Summary, <span class="fu">aes</span>(<span class="at">x =</span> PEDIGREE, <span class="at">y =</span> <span class="st">`</span><span class="at">Avg days between shedding and silking</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"coral"</span>) <span class="sc">+</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Average Days between Shedding and Silking by Variety"</span>, <span class="at">x =</span> <span class="st">"Variety"</span>, <span class="at">y =</span> <span class="st">"Avg Days Difference"</span>) <span class="sc">+</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2024,20 +2034,20 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>This will show the average days ti shedding vs the average days to silking This tests of varities that shed earlier also silk earlier - correlation acorss averages.</p>
 <p>If the point is right on the line then shedding and silking happens at the same time Points above the line mean silking happens after shedding. Points below the line mean that silking happens earlier then shedding.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggrepel"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggrepel"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggrepel' is in use and will not be installed</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Summary, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Avg days to shedding</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Avg days to silking</span><span class="st">`</span>, <span class="at">label =</span> PEDIGREE)) <span class="sc">+</span></span>
-<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span>    <span class="co"># &lt;-- smart labeling</span></span>
-<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Correlation between Avg Days to Shedding and Avg Days to Silking"</span>, </span>
-<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Avg Days to Shedding"</span>, </span>
-<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Avg Days to Silking"</span>) <span class="sc">+</span></span>
-<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Summary, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Avg days to shedding</span><span class="st">`</span>, <span class="at">y =</span> <span class="st">`</span><span class="at">Avg days to silking</span><span class="st">`</span>, <span class="at">label =</span> PEDIGREE)) <span class="sc">+</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span>    <span class="co"># &lt;-- smart labeling</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Correlation between Avg Days to Shedding and Avg Days to Silking"</span>, </span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Avg Days to Shedding"</span>, </span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Avg Days to Silking"</span>) <span class="sc">+</span></span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -2058,11 +2068,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 <p>We can see that Mo17 is the most synchornized, while CML258 is the least synchronized.</p>
 </section>
-<section id="correlation-2---avg-days-ti-shedding-and-avg-days-to-silking" class="level1">
-<h1>Correlation 2 - Avg days ti shedding and avg days to silking</h1>
+<section id="correlation-2---avg-days-to-shedding-and-avg-days-to-silking" class="level1">
+<h1>Correlation 2 - Avg days to shedding and avg days to silking</h1>
 <p>This is a correlation between Avg Days to Shedding and Avg Days to Silking</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(HI_Summary<span class="sc">$</span><span class="st">`</span><span class="at">Avg days to shedding</span><span class="st">`</span>, HI_Summary<span class="sc">$</span><span class="st">`</span><span class="at">Avg days to silking</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(HI_Summary<span class="sc">$</span><span class="st">`</span><span class="at">Avg days to shedding</span><span class="st">`</span>, HI_Summary<span class="sc">$</span><span class="st">`</span><span class="at">Avg days to silking</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Pearson's product-moment correlation
@@ -2076,12 +2086,82 @@ sample estimates:
       cor 
 0.8983502 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="do">##### CONCLUSION ####</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can see the correlation value was r = 0.898 This means that when the average days to shedding increases, the average days to silking also increases. This shows there is a strong posisitve correlation between shedding and silk and varieties that shed later also tend to silk later.</p>
-<section id="conclusion" class="level4">
-<h4 class="anchored" data-anchor-id="conclusion">CONCLUSION</h4>
 </section>
+<section id="now-lets-look-at-them-as-a-group-temperate-vs-tropical-lines" class="level1">
+<h1>Now lets look at them as a group: Temperate vs Tropical Lines</h1>
+<p>lets make a group summary</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>HI_Data<span class="sc">$</span>Group <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(HI_Data<span class="sc">$</span>PEDIGREE <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"B73"</span>, <span class="st">"B104"</span>, <span class="st">"Mo17"</span>), <span class="st">"Temperate"</span>, <span class="st">"Tropical"</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>HI_Data <span class="sc">%&gt;%</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Group) <span class="sc">%&gt;%</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_shedding =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">Days to Shedding</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_silking =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">Days to Silking</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">mean_diff =</span> <span class="fu">mean</span>(<span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  Group     mean_shedding mean_silking mean_diff
+  &lt;chr&gt;             &lt;dbl&gt;        &lt;dbl&gt;     &lt;dbl&gt;
+1 Temperate          54.2         55.6      1.33
+2 Tropical           62.5         60.9     -1.53</code></pre>
+</div>
+</div>
+<p>Nice, now lets do a plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(HI_Data, <span class="fu">aes</span>(<span class="at">x =</span> Group, <span class="at">y =</span> <span class="st">`</span><span class="at">Days to Shedding</span><span class="st">`</span>, <span class="at">fill =</span> Group)) <span class="sc">+</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Days to Shedding: Temperate vs. Tropical"</span>, <span class="at">y =</span> <span class="st">"Days"</span>, <span class="at">x =</span> <span class="st">"Group"</span>) <span class="sc">+</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Project_3_files/figure-html/Tempvstrop-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Here we can easily see how they differ in days to shedding</p>
+<p>Nice, now lets doa T-test to see their correlation</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="st">`</span><span class="at">Days to Shedding</span><span class="st">`</span> <span class="sc">~</span> Group, <span class="at">data =</span> HI_Data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  Days to Shedding by Group
+t = -10.753, df = 21.246, p-value = 4.694e-10
+alternative hypothesis: true difference in means between group Temperate and group Tropical is not equal to 0
+95 percent confidence interval:
+ -9.837714 -6.651175
+sample estimates:
+mean in group Temperate  mean in group Tropical 
+               54.22222                62.46667 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="st">`</span><span class="at">Days between Shedding and Silking</span><span class="st">`</span> <span class="sc">~</span> Group, <span class="at">data =</span> HI_Data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  Days between Shedding and Silking by Group
+t = 4.6817, df = 21.395, p-value = 0.000122
+alternative hypothesis: true difference in means between group Temperate and group Tropical is not equal to 0
+95 percent confidence interval:
+ 1.594733 4.138601
+sample estimates:
+mean in group Temperate  mean in group Tropical 
+               1.333333               -1.533333 </code></pre>
+</div>
+</div>
+<p>Since the p-values for days to shedding (4.694 × 10⁻¹⁰) and days between shedding and silking (0.000122) are both far below the typical threshold of 0.05, the t-tests confirm that there are statistically significant differences between temperate and tropical maize lines, with temperate lines flowering earlier and showing a larger gap between shedding and silking.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>This analysis highlights clear developmental differences between temperate and tropical maize lines grown during the Summer 2024 planting in Hawaiʻi. Through comparisons of days to shedding, silking timing, and accumulated thermal units (GDD), we observed that temperate varieties—B73, B104, and Mo17—flowered significantly earlier than their tropical counterparts. In addition, temperate lines showed a more pronounced and consistent gap between shedding and silking, whereas tropical lines often displayed faster or overlapping silking patterns. These findings are consistent with the known adaptations of temperate maize to shorter growing seasons and cooler climates, while tropical lines maintain delayed flowering suited for longer, warmer seasons. Overall, this project provides insight into the physiological timing differences across climate-adapted maize types and lays a foundation for future breeding efforts aimed at bridging tropical and temperate germplasm for enhanced environmental adaptability.</p>
 </section>
 <section id="thanks-for-listening" class="level1">
 <h1>Thanks for listening!</h1>
