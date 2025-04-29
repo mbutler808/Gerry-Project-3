@@ -140,6 +140,16 @@ HI_Summary %>%
   gt()
 
 
+## ---- Setorder -----
+
+# Reorder PEDIGREE factor
+HI_Data$PEDIGREE <- factor(HI_Data$PEDIGREE, levels = c("B73", "B104", "Mo17", "Tzi8", "Tzi9", "CML10", "CML277", "CML258"))
+
+# Also reorder HI_Summary if you're using it
+HI_Summary$PEDIGREE <- factor(HI_Summary$PEDIGREE, levels = c("B73", "B104", "Mo17", "Tzi8", "Tzi9", "CML10", "CML277", "CML258"))
+
+
+
 ## ---- Boxplot1 ----
 library(ggplot2)
 
@@ -224,7 +234,32 @@ ggplot(HI_Summary, aes(x = `Avg days to shedding`, y = `Avg days to silking`, la
 cor.test(HI_Summary$`Avg days to shedding`, HI_Summary$`Avg days to silking`)
 
 
-##### CONCLUSION ####
+## ---- Groupsummary ------
+HI_Data$Group <- ifelse(HI_Data$PEDIGREE %in% c("B73", "B104", "Mo17"), "Temperate", "Tropical")
+
+HI_Data %>%
+  group_by(Group) %>%
+  summarise(
+    mean_shedding = mean(`Days to Shedding`, na.rm = TRUE),
+    mean_silking = mean(`Days to Silking`, na.rm = TRUE),
+    mean_diff = mean(`Days between Shedding and Silking`, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+
+## ---- Tempvstrop ------
+ggplot(HI_Data, aes(x = Group, y = `Days to Shedding`, fill = Group)) +
+  geom_boxplot() +
+  labs(title = "Days to Shedding: Temperate vs. Tropical", y = "Days", x = "Group") +
+  theme_minimal()
+
+
+## ---- Ttest -----
+t.test(`Days to Shedding` ~ Group, data = HI_Data)
+t.test(`Days between Shedding and Silking` ~ Group, data = HI_Data)
+
+
+
 
 
 

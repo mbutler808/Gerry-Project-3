@@ -23,7 +23,10 @@ In our lab the project we are working on focuses on trying to make temperate cor
 
 Here in this project we'll explore the shedding and silking days of different maize lines grown in the Waimanalo research station. 
 
-#### TALK ABOUT THE VARIETES AND WHATS UNIQUE ABOUT EACH #####
+# The Maize we will explore
+
+This project examines flowering time traits in eight maize inbred lines grown during the Summer 2024 planting in Hawaiʻi. The goal is to compare temperate and tropical varieties based on their days to shedding and the interval between shedding and silking. The temperate lines—B73, B104, and Mo17—are widely used in breeding and research for their early flowering and adaptation to cooler climates. In contrast, the tropical lines—Tzi8, Tzi9, CML10, CML277, and CML258—originate from warmer regions and typically flower later. By evaluating thermal time (GDD) and developmental timing across these lines, we aim to highlight physiological differences and identify patterns relevant for hybrid development and climate adaptation.
+
 
 First you're going to want to download the file to your correct folder, then navigate to the correct location where the file is. 
 
@@ -104,6 +107,12 @@ Now time to make some graphs and do some statistical analysis!
 
 
 # Graph time!
+
+Before we make the graphs, lets group together the temperate and tropical lines so it's easier to visually compare them.
+
+```{r, Setorder}
+```
+Much better.
 
 Original Data 
 
@@ -218,9 +227,30 @@ We can see the correlation value was r = 0.898
 This means that when the average days to shedding increases, the average days to silking also increases.
 This shows there is a strong posisitve correlation between shedding and silk and varieties that shed later also tend to silk later. 
 
+# Now lets look at them as a group: Temperate vs Tropical Lines
 
+lets make a group summary
 
-#### CONCLUSION #######
+```{r, Groupsummary}
+```
+
+Nice, now lets do a plot.
+
+```{r, Tempvstrop}
+```
+Here we can easily see how they differ in days to shedding
+
+Nice, now lets doa T-test to see their correlation
+
+```{r, Ttest}
+```
+
+Since the p-values for days to shedding (4.694 × 10⁻¹⁰) and days between shedding and silking (0.000122) are both far below the typical threshold of 0.05, the t-tests confirm that there are statistically significant differences between temperate and tropical maize lines, with temperate lines flowering earlier and showing a larger gap between shedding and silking.
+
+# Conclusion
+
+This analysis highlights clear developmental differences between temperate and tropical maize lines grown during the Summer 2024 planting in Hawaiʻi. Through comparisons of days to shedding, silking timing, and accumulated thermal units (GDD), we observed that temperate varieties—B73, B104, and Mo17—flowered significantly earlier than their tropical counterparts. In addition, temperate lines showed a more pronounced and consistent gap between shedding and silking, whereas tropical lines often displayed faster or overlapping silking patterns. These findings are consistent with the known adaptations of temperate maize to shorter growing seasons and cooler climates, while tropical lines maintain delayed flowering suited for longer, warmer seasons.
+Overall, this project provides insight into the physiological timing differences across climate-adapted maize types and lays a foundation for future breeding efforts aimed at bridging tropical and temperate germplasm for enhanced environmental adaptability.
 
 # Thanks for listening!
 
