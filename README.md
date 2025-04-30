@@ -3,7 +3,9 @@
 I work on Maize Genetics so for this project I used Maize Flowering data from our Waimanalo Summer 2024 field tests.
 
 This data compares the flowering time of tropical and temperate maize lines grown in the Waimainalo Summer 2024 field.
+
 Temperate Lines: B73, Mo17, B104
+
 Tropical Lines: Tzi8, Tzi9, CML10, CML258, CML277
 
 The things you'll need to run the code and look at like the script, QMD, and data are right here on the front page.
