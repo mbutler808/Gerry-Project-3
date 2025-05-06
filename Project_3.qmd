@@ -46,17 +46,17 @@ Load dplyr and skmir first
 
 # What we have:
 
-Pedigree: Genotype / variety
-SHD: Shedding date (Pollen starts)
-SK: Silking Date (Female flowers have silks and are ready for reproduction)
-Days_SHD: Days after planting to shedding
-Days_SK: Dats after planting to silking
-GDD_SHD: Growing degree days to shedding
-GDD_SK: Growing degree days to silking
+Pedigree: Genotype / variety  
+SHD: Shedding date (Pollen starts)  
+SK: Silking Date (Female flowers have silks and are ready for reproduction)  
+Days_SHD: Days after planting to shedding  
+Days_SK: Dats after planting to silking  
+GDD_SHD: Growing degree days to shedding  
+GDD_SK: Growing degree days to silking  
 
-Okay, we have some good information, but we should add two columns that calculate 
-1. the difference in Days after planting (DAP) between silking and shedding (DAP_SK - DAP_SHD)
-2. the difference in Growing degree days (GDD) between silking and shedding (GDD_SK - GDD_SHD)
+Okay, we have some good information, but we should add two columns that calculate   
+1. the difference in Days after planting (DAP) between silking and shedding (DAP_SK - DAP_SHD)  
+2. the difference in Growing degree days (GDD) between silking and shedding (GDD_SK - GDD_SHD)  
 
 This will be good to add because the time between shedding and silking (especially thermal time) is extremely important in corn development and flowering time. 
 
