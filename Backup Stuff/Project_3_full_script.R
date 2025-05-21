@@ -18,12 +18,12 @@
 #### TALK ABOUT THE VARIETES AND WHATS UNIQUE ABOUT EACH #####
 
 
-getwd()
-setwd("C:/Users/jerry/Documents/Git")
-getwd()
-setwd("C:/Users/jerry/Documents/Git/Project-1-2-3")
-setwd("C:/Users/jerry/Documents/Git/Project-1-2-3/Project-3")
-getwd()
+# getwd()
+# setwd("C:/Users/jerry/Documents/Git")
+# getwd()
+# setwd("C:/Users/jerry/Documents/Git/Project-1-2-3")
+# setwd("C:/Users/jerry/Documents/Git/Project-1-2-3/Project-3")
+# getwd()
 
 # Lets load the data first
 

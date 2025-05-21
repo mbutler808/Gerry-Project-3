@@ -18,12 +18,17 @@
 #### TALK ABOUT THE VARIETES AND WHATS UNIQUE ABOUT EACH #####
 
 ## ---- Fixpath ----
-getwd()
-setwd("C:/Users/jerry/Documents/Git")
-getwd()
-setwd("C:/Users/jerry/Documents/Git/Project-1-2-3")
-setwd("C:/Users/jerry/Documents/Git/Project-1-2-3/Project-3")
-getwd()
+# Itʻs OK to leave notes to yourself but it should be commented out
+# Eventually, youʻll understand how to do this and wonʻt need it anymore
+# you should probably change the default settings in R studio to run from 
+# the current workign directory, and startup from the directory that the 
+# script is in
+# getwd()
+# setwd("C:/Users/jerry/Documents/Git")
+# getwd()
+# setwd("C:/Users/jerry/Documents/Git/Project-1-2-3")
+# setwd("C:/Users/jerry/Documents/Git/Project-1-2-3/Project-3")
+# getwd()
 
 ## ---- Loaddata ----
 library(here)

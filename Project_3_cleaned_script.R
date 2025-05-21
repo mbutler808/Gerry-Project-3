@@ -29,15 +29,12 @@ data_location <- here("HI_SU2024_SHD_SLK.csv")
 HI_Data <- read.csv("HI_SU2024_SHD_SLK.csv")
 
 ## ---- Exploredata ----
-library(dplyr)
 library(skimr)
 dplyr::glimpse(HI_Data)
 summary(HI_Data)
 skimr::skim(HI_Data)
 
 ## ---- Addcolumns -----
-library(dplyr)
-
 HI_Data <- HI_Data %>%
   mutate(
     Days_diff = Days_SK - Days_SHD,    # How many days between shedding and silking
@@ -53,8 +50,6 @@ HI_Data
 # We'll look at how early or late each pedigree is and 
 # how synchronized shedding and silking are on average.
 
-library(dplyr)
-
 HI_Data %>%
   group_by(PEDIGREE) %>%
   summarise(
@@ -68,7 +63,7 @@ HI_Data %>%
 # Oops, two CML277 rows showed up, but we just want one.
 # lets remove that extra space then look at the summary table again.
     
-install.packages("stringr")
+# install.packages("stringr")
 library(stringr)
     
 HI_Data <- HI_Data %>%
@@ -114,7 +109,7 @@ HI_Summary <- HI_Data %>%
 
 # Lets also clean the original data set so its easier to read when we make graphs from it.
 
-library(dplyr)
+#library(dplyr)
 
 HI_Data <- HI_Data %>%
   rename(
@@ -177,7 +172,6 @@ ggplot(HI_Data, aes(x = `Shed GDD`, y = `Silk GDD`, color = PEDIGREE)) +
   theme_minimal()
 
 ## ---- Barplot1 -----
-library(dplyr)
 
 count_data <- HI_Data %>%
   group_by(PEDIGREE, `Days between Shedding and Silking`) %>%
@@ -218,7 +212,7 @@ ggplot(HI_Summary, aes(x = PEDIGREE, y = `Avg days between shedding and silking`
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ## ---- Correlation1 -------
-install.packages("ggrepel")
+#install.packages("ggrepel")
 library(ggrepel)
 
 ggplot(HI_Summary, aes(x = `Avg days to shedding`, y = `Avg days to silking`, label = PEDIGREE)) +
